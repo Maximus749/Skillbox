@@ -13,29 +13,34 @@ goods = {
 # Есть словарь списков количества товаров на складе.
 
 store = {
-    '12345': [
+    '12345': [                          #  ЛАМПА
         {'quantity': 27, 'price': 42},
     ],
-    '23456': [
+    '23456': [                          #  СТОЛ
         {'quantity': 22, 'price': 510},
         {'quantity': 32, 'price': 520},
     ],
-    '34567': [
+    '34567': [                          #  ДИВАН
         {'quantity': 2, 'price': 1200},
         {'quantity': 1, 'price': 1150},
     ],
-    '45678': [
+    '45678': [                          #  СТУЛ
         {'quantity': 50, 'price': 100},
         {'quantity': 12, 'price': 95},
         {'quantity': 43, 'price': 97},
     ],
 }
+lamp_cost = store['12345'][0]['quantity'] * store['12345'][0]['price']
+table_cost = store['23456'][0]['quantity'] * store['23456'][0]['price'] + store['23456'][1]['quantity'] * store['23456'][1]['price']
+sofa_cost = store['34567'][0]['quantity'] * store['34567'][0]['price'] + store['34567'][1]['quantity'] * store['34567'][1]['price']
+chair_cost = store['45678'][0]['quantity'] * store['45678'][0]['price'] + store['45678'][1]['quantity'] * store['45678'][1]['price'] + store['45678'][2]['quantity'] * store['45678'][2]['price']
 
+print('На складе лежит: ламп на - ', lamp_cost, 'руб, Столов на -', table_cost, 'руб, диванов на -', sofa_cost, 'руб, и стульев на', chair_cost, 'руб')
 # Рассчитать на какую сумму лежит каждого товара на складе
 # например для ламп
 
-lamps_cost = store[goods['Лампа']][0]['quantity'] * store[goods['Лампа']][0]['price']
-# или проще (/сложнее ?)
+'''lamps_cost = store[goods['Лампа']][0]['quantity'] * store[goods['Лампа']][0]['price']
+# или проще (/сложнее ?)'''
 lamp_code = goods['Лампа']
 lamps_item = store[lamp_code][0]
 lamps_quantity = lamps_item['quantity']
