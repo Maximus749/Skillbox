@@ -1,5 +1,6 @@
 from pprint import pprint
-#!/usr/bin/env python
+
+# !/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 # Есть словарь магазинов с распродажами
@@ -49,4 +50,3 @@ sweets = {
 }
 # Указать надо только по 2 магазина с минимальными ценами
 pprint(sweets)
-

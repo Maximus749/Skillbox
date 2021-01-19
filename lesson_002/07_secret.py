@@ -28,4 +28,3 @@ fourth_word = secret_message[3][12:6:-1]
 fifth_word = secret_message[4][20:15:-1]
 print(first_word, second_word, third_word, fourth_word, fifth_word)
 '''в бане веник дороже денег'''
-

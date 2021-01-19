@@ -14,7 +14,6 @@ pi = 3.1415926
 squere = round((pi * radius ** 2), 5)
 print(squere)
 
-
 # Далее, пусть есть координаты точки
 point = (23, 34)
 # где 23 - координата х, 34 - координата у
@@ -41,5 +40,3 @@ print(question_2 <= radius)
 # 77777.7777
 # False
 # False
-
-
