@@ -58,19 +58,12 @@ for name, content in store.items():
     elif name == "45678":
         name = "СТУЛ"
     for contents in content:
-#        print(contents)
         pass
         for key, value in contents.items():
             if key == 'quantity':
-                name_quality = value
+                name_quantity = value
                 quantity += value
             if key == 'price':
-                name_price = value * name_quality
+                name_price = value * name_quantity
                 total_price += name_price
     print(name, "-", quantity, "шт,", "общая стоимость", "-", total_price, "руб")
-
-
-
-
-
-
