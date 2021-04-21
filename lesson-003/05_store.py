@@ -12,18 +12,18 @@ goods = {
 # Есть словарь списков количества товаров на складе.
 
 store = {
-    '12345': [
+    '12345': [  # ЛАМПА
         {'quantity': 27, 'price': 42},
     ],
-    '23456': [
+    '23456': [  # СТОЛ
         {'quantity': 22, 'price': 510},
         {'quantity': 32, 'price': 520},
     ],
-    '34567': [
+    '34567': [  # ДИВАН
         {'quantity': 2, 'price': 1200},
         {'quantity': 1, 'price': 1150},
     ],
-    '45678': [
+    '45678': [  # СТУЛ
         {'quantity': 50, 'price': 100},
         {'quantity': 12, 'price': 95},
         {'quantity': 43, 'price': 97},
@@ -46,7 +46,28 @@ store = {
 #         подсчет стоимости товара
 #     вывод на консоль количества и стоимости товара на складе
 
-# TODO здесь ваш код
+for name, content in store.items():
+    quantity = 0
+    total_price = 0
+    if name == "12345":
+        name = "ЛАМПА"
+    elif name == "23456":
+        name = "СТОЛ"
+    elif name == "34567":
+        name = "СТОЛ"
+    elif name == "45678":
+        name = "СТУЛ"
+    for contents in content:
+#        print(contents)
+        pass
+        for key, value in contents.items():
+            if key == 'quantity':
+                name_quality = value
+                quantity += value
+            if key == 'price':
+                name_price = value * name_quality
+                total_price += name_price
+    print(name, "-", quantity, "шт,", "общая стоимость", "-", total_price, "руб")
 
 
 
